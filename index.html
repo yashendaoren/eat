@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>今天吃啥</title>
+</head>
+<style>
+body{
+    width: 300px;
+    margin: 20px auto;
+}
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+div{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+</style>
+
+<body>
+    <ul>
+        <li>食堂</li>
+        <li>楼下餐厅</li>
+        <li>大娘饺子</li>
+        <li>蒸菜</li>
+        <li>华必和</li>
+        <li>一奇</li>
+        <li>重庆小面</li>
+        <li>特未</li>
+        <li>夫子面</li>
+        <li>香锅</li>
+        <li>外婆家</li>
+        <li>中奖了，再来一次</li>
+    </ul>
+    <div onclick='chooseOne()' style="cursor:pointer;border: 1px solid #333;">选一个</div>
+    <div id='res' style="color:red;"></div>
+    <script >
+     function chooseOne(){
+        var array =  document.getElementsByTagName('li')
+        var num = Math.round(Math.random()*(array.length-1));
+        document.getElementById('res').innerHTML = array[num].innerHTML
+     }
+    </script>
+    
+</body>
+</html>
